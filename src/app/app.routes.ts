@@ -8,8 +8,11 @@ import { UserInteractionComponent } from './user-interaction/user-interaction.co
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 
+<<<<<<< HEAD
 import { ProdListComponent } from './prodManagement/prodList/prod-list.component';
 import { ViewDetailsComponent } from './prodManagement/viewDetails/view-details.component';
+=======
+>>>>>>> d7463b618b91d2428d853a1b12c5f60dd148c2c9
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +22,7 @@ export const routes: Routes = [
   { path: 'user-interaction', component: UserInteractionComponent },
   { path: 'login', component: LoginComponent },
   { path: 'event-binding', component: EventBindingComponent },
+<<<<<<< HEAD
   { path: 'two-way-binding', component: TwoWayBindingComponent },
 
   { 
@@ -30,4 +34,7 @@ export const routes: Routes = [
   },
 
   { path: '**', redirectTo: '', pathMatch: 'full' }
+=======
+  { path: 'two-way-binding', component: TwoWayBindingComponent }
+>>>>>>> d7463b618b91d2428d853a1b12c5f60dd148c2c9
 ];
