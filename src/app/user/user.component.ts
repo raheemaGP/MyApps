@@ -13,7 +13,7 @@ import { Product } from '../models/product.interface';
 })
 export class UserComponent {
   id: number = 0;
-  name: string = '';
+  name: string = '';git push -u origin main
   position: string = '';
   department: string = '';
 
