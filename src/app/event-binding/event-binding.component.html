@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- SECTION C: EVENT BINDING  ( )                               -->
   <!-- Parentheses tell Angular: listen for this DOM event, and     -->
   <!-- when it fires, execute the right-hand side expression.       -->
@@ -99,3 +100,33 @@
 
   </div>
 </div>
+=======
+<h2>Event Binding Example</h2>
+
+<!-- Select dropdown -->
+<select [(ngModel)]="selectedFramework" (change)="onSelectionChange(selectedFramework)">
+  <option *ngFor="let framework of frameworks" [value]="framework">{{ framework }}</option>
+</select>
+<p>Selected Framework: {{ selectedFramework }}</p>
+
+<!-- Form submission -->
+<form (submit)="onFormSubmit($event)">
+  <input type="text" [(ngModel)]="inputValue" name="inputValue" />
+  <button type="submit">Submit</button>
+</form>
+<p>{{ formMessage }}</p>
+
+<!-- Double click -->
+<div (dblclick)="onDoubleClick()" style="border:1px solid black; padding:10px; margin-top:10px;">
+  Double-click here
+</div>
+
+<!-- Right click -->
+<div (contextmenu)="onRightClick($event)" style="border:1px solid red; padding:10px; margin-top:10px;">
+  Right-click here
+</div>
+
+<ul>
+  <li *ngFor="let entry of eventLog">{{ entry }}</li>
+</ul>
+>>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea

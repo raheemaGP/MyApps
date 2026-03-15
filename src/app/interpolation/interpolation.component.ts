@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { NgFor, JsonPipe } from '@angular/common';
 
@@ -10,10 +11,13 @@ export interface User {
     role: string;
   };
 }
+=======
+>>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
 
 @Component({
   selector: 'app-interpolation',
   standalone: true,
+<<<<<<< HEAD
   imports: [FormsModule, NgFor, JsonPipe],
   templateUrl: './interpolation.component.html',
   styleUrls: ['./interpolation.component.css'],
@@ -63,5 +67,22 @@ export class InterpolationComponent {
   getWelcomeMessage(): string {
     return `Welcome, ${this.studentName}! Today we learn data binding.`;
   }
+=======
+  template: `
+  <div class="card p-4 shadow">
+    <h2>Interpolation Example</h2>
+
+    <p><b>Name:</b> {{name}}</p>
+    <p><b>Course:</b> {{course}}</p>
+    <p><b>Section:</b> {{section}}</p>
+  </div>
+  `
+})
+export class InterpolationComponent {
+
+  name = "Raheema";
+  course = "BSIT";
+  section = "Web Development";
+>>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
 
 }

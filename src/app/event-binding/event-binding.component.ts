@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+=======
+>>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
 
 @Component({
   selector: 'app-event-binding',
   standalone: true,
+<<<<<<< HEAD
   imports: [FormsModule, NgFor],
   templateUrl: './event-binding.component.html',
   styleUrls: ['./event-binding.component.css'],
@@ -83,5 +87,18 @@ export class EventBindingComponent {
   private logEvent(msg: string): void {
     this.eventLog.unshift(`[${new Date().toLocaleTimeString()}] ${msg}`);
     if (this.eventLog.length > 5) this.eventLog.pop();
+=======
+  template: `
+    <h2>Event Binding Example</h2>
+    <button (click)="onClick()">Click Me!</button>
+    <p>{{ message }}</p>
+  `
+})
+export class EventBindingComponent {
+  message = '';
+
+  onClick() {
+    this.message = 'Button clicked!';
+>>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
   }
 }

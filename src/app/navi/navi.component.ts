@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
       <div class="navbar-nav">
         <a class="nav-link" routerLink="/">Home</a>
         <a class="nav-link" routerLink="/about">About</a>
+<<<<<<< HEAD
 
         <!-- Dropdown -->
         <div class="nav-item dropdown">
@@ -39,6 +40,12 @@ import { RouterModule } from '@angular/router';
         <!-- Products link -->
         <a class="nav-link" routerLink="/products">Products</a>
         <!-- Login / User Interaction removed -->
+=======
+        <a class="nav-link" routerLink="/interpolation">Interpolation</a>
+        <a class="nav-link" routerLink="/property-binding">Property Binding</a>
+        <a class="nav-link" routerLink="/user-interaction">User Interaction</a>
+        <a class="nav-link" routerLink="/login">Login</a>
+>>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
       </div>
     </div>
   </nav>
