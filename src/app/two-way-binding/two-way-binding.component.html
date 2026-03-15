@@ -1,0 +1,104 @@
+<div class="container mt-4">
+  <h3>D — Two-Way Binding <code>[( )]</code></h3>
+  <p>Two-way binding allows you to synchronize data between the component and the template in both directions.</p>
+  <p>Any changes to the input update the component, and changes in the component update the input automatically.</p>
+
+  <div class="card text-white bg-danger mb-3">
+    <div class="card-header">Examples</div>
+    <div class="card-body">
+      
+      <!-- Name -->
+      <label>Full Name:
+        <input type="text" [(ngModel)]="twoWayName" class="form-control" placeholder="Enter name" />
+      </label>
+      <p>Name preview: <strong>{{ twoWayName }}</strong></p>
+
+      <!-- Email -->
+      <label>Email:
+        <input type="email" [(ngModel)]="twoWayEmail" class="form-control" placeholder="Enter email" />
+      </label>
+
+      <!-- Age slider -->
+      <label>Age: {{ twoWayAge }}
+        <input type="range" min="18" max="60" [(ngModel)]="twoWayAge" />
+      </label>
+
+      <!-- Gender radio -->
+      <fieldset>
+        <legend class="mt-4">Gender:</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="optionsRadios" [(ngModel)]="twoWayGender" value="male">
+          <label class="form-check-label">Male</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="optionsRadios" [(ngModel)]="twoWayGender" value="female">
+          <label class="form-check-label">Female</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="optionsRadios" [(ngModel)]="twoWayGender" value="other">
+          <label class="form-check-label">Other</label>
+        </div>
+      </fieldset>
+      <p>Selected gender: {{ twoWayGender }}</p>
+
+      <!-- Checkbox -->
+      <label>
+        <input type="checkbox" [(ngModel)]="twoWaySubscribed" /> Subscribe to newsletter
+      </label>
+      <p>Subscribed: {{ twoWaySubscribed }}</p>
+
+      <!-- Range slider -->
+      <input type="range" min="0" max="100" [(ngModel)]="rangeValue" class="form-range">
+      <p>Range Value: {{ rangeValue }}</p>
+
+      <!-- Language dropdown -->
+      <select [(ngModel)]="twoWayLanguage" class="form-select">
+        <option value="" disabled>Select an option</option>
+        <option *ngFor="let p of programmingLanguages" [value]="p">{{ p }}</option>
+      </select>
+      <p>Selected Language: {{ twoWayLanguage }}</p>
+
+      <!-- Color -->
+      <label>Favorite Color:
+        <input type="color" [(ngModel)]="twoWayColor" />
+      </label>
+      <div [style.background-color]="twoWayColor" [style.color]="'white'" class="color-swatch">
+        Color: {{ twoWayColor }}
+      </div>
+
+      <!-- Reset button -->
+      <button class="btn btn-primary" (click)="resetForm()">Reset All Fields</button>
+
+      <!-- Live profile summary -->
+      <div class="profile-summary mt-3">
+        <strong>Live Profile:</strong>
+        <p>{{ profileSummary }}</p>
+      </div>
+
+      <!-- User table -->
+      <table class="table table-dark table-striped table-hover mt-4">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>DEPARTMENT</th>
+            <th>VIEW</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of users" [class.table-active]="selectedId === u.id">
+            <th>{{ u.id }}</th>
+            <td>{{ u.name }}</td>
+            <td>{{ u.department }}</td>
+            <td>
+              <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onClick(u)">
+                View Details
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
