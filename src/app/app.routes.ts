@@ -1,8 +1,5 @@
 import { Routes } from '@angular/router';
-<<<<<<< HEAD
 
-=======
->>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
@@ -12,18 +9,10 @@ import { UserInteractionComponent } from './user-interaction/user-interaction.co
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 
-<<<<<<< HEAD
 import { ProductsComponent } from './products/products.component';
 
 import { ProdlistComponent } from './prodManagement/prodList/prod-list.component';
 import { ViewDetailsComponent } from './prodManagement/viewDetails/view-details.component';
-=======
-<<<<<<< HEAD
-import { ProdListComponent } from './prodManagement/prodList/prod-list.component';
-import { ViewDetailsComponent } from './prodManagement/viewDetails/view-details.component';
-=======
->>>>>>> d7463b618b91d2428d853a1b12c5f60dd148c2c9
->>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,7 +22,6 @@ export const routes: Routes = [
   { path: 'user-interaction', component: UserInteractionComponent },
   { path: 'login', component: LoginComponent },
   { path: 'event-binding', component: EventBindingComponent },
-<<<<<<< HEAD
   { path: 'two-way-binding', component: TwoWayBindingComponent },
   { path: 'products', component: ProductsComponent },
 
@@ -42,25 +30,9 @@ export const routes: Routes = [
     path: 'prod-management',
     children: [
       { path: '', component: ProdlistComponent },
-=======
-<<<<<<< HEAD
-  { path: 'two-way-binding', component: TwoWayBindingComponent },
-
-  { 
-    path: 'prod-management',
-    children: [
-      { path: '', component: ProdListComponent },
->>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
       { path: 'details/:id', component: ViewDetailsComponent }
     ]
   },
 
-<<<<<<< HEAD
   { path: '**', redirectTo: '' }
-=======
-  { path: '**', redirectTo: '', pathMatch: 'full' }
-=======
-  { path: 'two-way-binding', component: TwoWayBindingComponent }
->>>>>>> d7463b618b91d2428d853a1b12c5f60dd148c2c9
->>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
 ];

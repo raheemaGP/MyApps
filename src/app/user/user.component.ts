@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Component } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { NgFor, NgIf, NgClass } from '@angular/common';
@@ -13,7 +12,7 @@ import { Product } from '../models/product.interface';
 })
 export class UserComponent {
   id: number = 0;
-  name: string = '';git push -u origin main
+  name: string = '';
   position: string = '';
   department: string = '';
 
@@ -40,14 +39,4 @@ export class UserComponent {
   trackById(index: number, item: Product) {
     return item.id;
   }
-=======
-export interface User {
-  id: number;
-  name: string;
-  position: string;
-  department: string;
-  details?: {
-    role: [number, string];
-  };
->>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
 }

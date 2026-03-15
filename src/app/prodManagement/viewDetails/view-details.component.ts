@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/product.interface';
 import { ProductService } from '../../services/product.service';
@@ -20,29 +19,10 @@ export class ViewDetailsComponent implements OnInit {
     private productService: ProductService,
     private route: ActivatedRoute,
     private router: Router
-=======
-import { ActivatedRoute } from '@angular/router';
-import { Product } from '../../models/product.interface';
-import { ProductService } from '../../services/product.service';
-
-@Component({
-  selector: 'app-view-details',
-  templateUrl: './view-details.component.html'
-  styleUrls: ['./view-details.component.css']
-})
-export class ViewDetailsComponent implements OnInit {
-
-  product: Product | undefined;
-
-  constructor(
-    private route: ActivatedRoute,
-    private productService: ProductService
->>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
   ) {}
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-<<<<<<< HEAD
     this.product = this.productService.getProductsById(id);
   }
 
@@ -56,8 +36,5 @@ export class ViewDetailsComponent implements OnInit {
       this.saved = true;
       setTimeout(() => (this.saved = false), 2500);
     }
-=======
-    this.productService.getProductById(id).subscribe(p => this.product = p);
->>>>>>> 43c60ef965704e5c977c449a32804b1ed100b1ea
   }
 }
